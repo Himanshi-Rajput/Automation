@@ -21,7 +21,7 @@ public class ActionsClass_resizable {
 
         Actions act = new Actions(driver);
         //The x offset is the horizontal movement and the y offset is the vertical movement.
-        act.moveToElement(resize).dragAndDropBy(resize , 0, 100).build().perform();
+        act.moveToElement(resize).dragAndDropBy(resize , 100, 0).build().perform();
 
         Thread.sleep(5000);
 

@@ -1,22 +1,27 @@
 package test.testcase1;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class ActionsClass_Assignment1 {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
+
+
+
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--disable-notifications");
 
         WebDriver driver = new ChromeDriver(options);
+
 
         driver.manage().window().maximize();
 
@@ -24,7 +29,7 @@ public class ActionsClass_Assignment1 {
 
         driver.get("https://www.flipkart.com/");
 
-        driver.findElement(By.className("_30XB9F")).click();
+        //driver.findElement(By.className("_30XB9F")).click();
 
         WebElement fashion = driver.findElement(By.xpath("//*[@class=\"_27h2j1\"]"));
 
@@ -43,10 +48,10 @@ public class ActionsClass_Assignment1 {
         Thread.sleep(3000);
 
         System.out.println("I did it....");
+
+
+
         driver.quit();
-
-
-
 
 
     }

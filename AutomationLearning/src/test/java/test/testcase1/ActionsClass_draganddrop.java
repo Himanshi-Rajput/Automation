@@ -6,16 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import java.io.IOException;
 
 public class ActionsClass_draganddrop {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
 
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
+
 
         driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html#google_vignette");
 
@@ -56,6 +58,8 @@ public class ActionsClass_draganddrop {
         act.clickAndHold(source7).moveToElement(target7).release().build().perform();
 
         System.out.println("We played Game and we won.........");
+
+        Thread.sleep(2000);
 
         driver.quit();
     }
